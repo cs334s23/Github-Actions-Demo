@@ -1,15 +1,21 @@
 name: calculator-app
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push, pull_request]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - name: run tests
-      run: make
+      - name: Checkout repository
+        uses: actions/checkout@v2 # Checkout the repository content to github runner.
+
+      - name: Setup Python Version
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9 # Install the python version needed
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Execute Python script # Run the run.py to get the latest data
+        run: make test
