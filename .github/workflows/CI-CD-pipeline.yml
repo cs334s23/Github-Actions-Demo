@@ -1,21 +1,25 @@
 name: calculator-app
-on: [push, pull_request]
+on: [push, pull_request] # represents the action this workflow will be triggered by 
+                         # addtional options can be found here: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows 
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  pr-merge: #name of job (should indicate the action this workflow will be called on)
+    runs-on: ubuntu-latest # docker container to run workflow on
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2 # Checkout the repository content to github runner.
+        uses: actions/checkout@v2 # Checkout the repository content to github runner. Basically goes to the root dir of the project
 
       - name: Setup Python Version
         uses: actions/setup-python@v2
         with:
           python-version: 3.9 # Install the python version needed
 
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
+      - name: Setup Virtual Environment
+        run: |
+          python3 -m venv .venv 
+          .venv/bin/pip install -r requirements.txt 
 
-      - name: Execute Python script # Run the run.py to get the latest data
+      - name: Execute Makefile Tests#
         run: make test
+
