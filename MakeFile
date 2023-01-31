@@ -1,8 +1,4 @@
 export PATH:=${PWD}/.venv/bin:${PATH};
 
-all: test static
-
 test:
-	pytest;
-
-
+	pytest
