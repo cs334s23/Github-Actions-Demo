@@ -19,3 +19,11 @@ Steps:
     ![Screenshot](example_yaml.png)
 
 
+# References 
+- Triggering a workflow without actual push/pull_request
+    - [nektos/act](https://github.com/nektos/act)
+        - Allows you to run your GitHub Actions locally
+        - Faster Feedback, than pushing/making pull requests
+- 
+
+
