@@ -14,8 +14,11 @@ Steps:
     
     ```touch <workflow-file-name>.yml```
 
-3. Here is an example of what a workflow.yml file could look like 
+    * Here is an example of what a workflow.yml file could look like 
 
-    ![Screenshot](example_yaml.png)
+        ![Screenshot](example_yaml.png)
+
+3. `make` command along with a corresponding `makefile` can be used to automate complicated testing steps from the command line.
+    * Calling `make` from from the yaml file is a good practice because changes would only have to be made in the `makefile` and can be used from GitHub Actions or command line.
 
 
