@@ -15,7 +15,6 @@ Steps:
     ```touch <workflow-file-name>.yml```
 
     * Here is an example of what a workflow.yml file could look like 
-
         ![Screenshot](example_yaml.png)
 
 3. `make` command along with a corresponding `makefile` can be used to automate complicated testing steps from the command line.
@@ -27,6 +26,5 @@ Steps:
     - [nektos/act](https://github.com/nektos/act)
         - Allows you to run your GitHub Actions locally
         - Faster Feedback, than pushing/making pull requests
-- 
 
 
