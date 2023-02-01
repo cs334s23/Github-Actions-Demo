@@ -22,3 +22,11 @@ Steps:
     * Calling `make` from from the yaml file is a good practice because changes would only have to be made in the `makefile` and can be used from GitHub Actions or command line.
 
 
+# References 
+- Triggering a workflow without actual push/pull_request
+    - [nektos/act](https://github.com/nektos/act)
+        - Allows you to run your GitHub Actions locally
+        - Faster Feedback, than pushing/making pull requests
+- 
+
+
